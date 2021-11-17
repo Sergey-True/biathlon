@@ -4,20 +4,20 @@ body {
     padding: 0;
 }
 
-.selector {
+.shooter-1 {
     padding: 55px 0 55px 0;
 
     background-color: #fcf8e3;
     border-bottom: 1px dashed #cccccc;
 }
 
-.selector {
+.shooter-2 {
     padding: 55px 0 55px 0;
 
     background-color: #d9edf7;
 }
 
-.selector {
+.target {
     display: flex;
     justify-content: space-between;
     width: 200px;
@@ -33,7 +33,7 @@ body {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
 
-selector {
+li {
     position: relative;
 
     width: 22px;
@@ -45,8 +45,11 @@ selector {
     border: 1px solid black;
     border-radius: 50%;
 }
-
-selector {
+.shooter-1 li.miss .lever,
+.shooter-2 li:nth-child(1) .lever,
+.shooter-2 li:nth-child(4) .lever,
+.shooter-2 li:nth-child(5) .lever
+{
     width: 10px;
     height: 10px;
     margin: 6px auto;
@@ -55,7 +58,10 @@ selector {
     border-radius: 50%;
 }
 
-selector {
+.shooter-1 li:not(.miss) .hitbox,
+.shooter-2 li:nth-child(2) .hitbox,
+.shooter-2 li:nth-child(3) .hitbox
+{
     position: absolute;
     top: -2px;
     left: -2px;
@@ -68,7 +74,11 @@ selector {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
-selector {
+.shooter-1 li:not(.miss) .lever span,
+.shooter-2 li:nth-child(2) .lever span,
+.shooter-2 li:nth-child(3) .lever span
+
+{
     position: absolute;
     top: 12px;
     left: 11px;
